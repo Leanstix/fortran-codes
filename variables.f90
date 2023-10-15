@@ -16,15 +16,19 @@ program variables
 !precision.
         integer :: classy = 20 !This variable is used to declare whole
 !numbers.
+        character *20 :: name4
         character (len = 12) :: name1 = 'Aleshinloye' 
         character(len = 10) :: name3 = 'Olamilekan'
         character (len = 24) :: name2 = 'Aleshinloye_Olamilekan'
         real :: clave = 5.44
+        print *, "kindly inout yes or no"
+        read *, name4
         print *, "Biggest Real ", huge(clave)
         print *, "Biggest int ", huge(classy)
         print *, "smallest Real ", tiny(clave)
-        print "(a3, i2)", "integer ", kind(classy)
+        print "(a7, i2)", "integer ", kind(classy)
         print "(a5, i2)", "Real ", kind(clave)
         print "(a7, i2)", "Double ", kind(double_var)
+        print *, adjustl(name1), adjustr(name3)
 
 end program variables
