@@ -1,6 +1,6 @@
 program variables
       implicit none
-        real, parameter :: pi = 3.142!the "real" unlike C programming,
+        real, parameter :: pi = 3.142345678!the "real" unlike C programming,
 ! is used to specify is a variable is a float i.e its a number with
 ! decimals also, just like the float it has just a 6 decimal digits
 ! precision i.e it can only store decimal digits up to the sixth decimal
@@ -20,7 +20,7 @@ program variables
         character (len = 12) :: name1 = 'Aleshinloye' 
         character(len = 10) :: name3 = 'Olamilekan'
         character (len = 24) :: name2 = 'Aleshinloye_Olamilekan'
-        real :: clave = 5.44
+        real :: clave = 5.4445678889
         print *, "kindly inout yes or no"
         read *, name4
         print *, "Biggest Real ", huge(clave)
@@ -30,5 +30,6 @@ program variables
         print "(a5, i2)", "Real ", kind(clave)
         print "(a7, i2)", "Double ", kind(double_var)
         print *, adjustl(name1), adjustr(name3)
+        print *, clave
 
 end program variables
